@@ -1,13 +1,12 @@
 public class twoSums {
     public int[] twoSum(int[] nums, int target) {
         
-        for(int i = 1 ; i<=nums.length ; i++){
-           int k = i-1;
+        for(int i = 0 ; i<=nums.length-1; i++){
             
-            for(int j = i ;j<=nums.length-i; j++){
+            for(int j = i+1 ;j<=nums.length; j++){
                 
-                if(k+j==target){
-                    return new int[]{j,k};
+                if(nums[i]+nums[j]==target){
+                    return new int[]{j,i};
                 }
             }
         }
